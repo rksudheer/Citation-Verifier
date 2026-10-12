@@ -4,6 +4,14 @@ A small tool that checks whether the references in a manuscript exist and are de
 
 **Version 0.1.0, an early release.** It works, but it has only been tried on a small number of real reference lists. There is no measured accuracy figure. Please read "What it does not do" before relying on it.
 
+## Download for Windows
+
+No Python needed. Download `CitationVerifier.exe` from the [latest release](../../releases/latest) and double-click it. A black window opens, then a page in your browser. Keep the window open while you work, and close it to quit.
+
+The first time, Windows may say "Windows protected your PC" because the program is not code-signed. Click **More info**, then **Run anyway**. The file is built automatically by GitHub from the code in this repository. To confirm that your download is unaltered, compare its checksum with the `.sha256.txt` file on the release page. In PowerShell, run `Get-FileHash .\CitationVerifier.exe -Algorithm SHA256`.
+
+Landing page: https://rksudheer.github.io/Citation-Verifier/
+
 ## What it checks
 
 For each reference it:
@@ -30,7 +38,7 @@ For each reference it:
 - English-language references only. Other languages have not been tried.
 - The retraction check depends on OpenAlex and Crossref and may be incomplete.
 
-## Install and run
+## Run from the source code (needs Python)
 
 You need Python 3.9 or newer. There is nothing to install.
 
@@ -38,7 +46,7 @@ You need Python 3.9 or newer. There is nothing to install.
 python citation_verifier_app.py
 ```
 
-Then open http://127.0.0.1:8765 (it opens automatically). Stop it with Ctrl+C.
+Then open http://127.0.0.1:8765 (it opens automatically). Stop it with Ctrl+C. If that port is busy, it uses the next free one, and the address is printed in the window.
 
 To use another port: `python citation_verifier_app.py --port 8800`.
 
