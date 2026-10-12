@@ -1,4 +1,5 @@
 # Citation Verifier
+Created by Dr. Sudheer Aluru, Oral Microbiology Research Laboratory, Department of Bioclinical Sciences, Faculty of Dentistry, Health Sciences Center, Kuwait University, Kuwait. **This is a personal project and not an official product of Kuwait University**.
 
 A small tool that checks whether the references in a manuscript exist and are described correctly. You paste a reference list (or load a Word file), and each reference is checked live against Crossref, OpenAlex and PubMed. Results appear one by one as they come in.
 
